@@ -1,0 +1,26 @@
+Pinout
+
+- 3V - This is the power input pin, this powers the chip directly. Use a quiet power supply pin if available. (The chip supports 1.8-3.3V but we have not tested it at 1.8V)
+- GND - Power and data ground reference
+- SEL - Left/Right select. If this pin is high, the output is on the falling edge of CLK considered the 'Right' channel. If this pin is low, the output is on the rising edge, a.k.a 'Left' channel.
+- CLK - PDM clock in, 1 - 3 MHz square wave required
+- DAT - PDM data out.
+
+
+
+For the Feather M0 / Metro M0 / Arduino Zero family, here's the available I2S pins:
+
+Available Clock Pins:
+- PA10 a.k.a D1 or TX
+- PB11 a.k.a SCK
+- PA20 a.k.a. D6
+
+
+Available Data Pins:
+- PA07 a.k.a D9
+- PA08 a.k.a D4
+- PA19 a.k.a. D12
+
+
+
+

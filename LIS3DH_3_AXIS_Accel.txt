@@ -1,0 +1,37 @@
+Use this wiring if you want to connect via I2C interface
+
+- Connect Vin to the power supply, 3-5V is fine. (red wire on STEMMA QT version) Use the same voltage that the microcontroller logic is based off of. For most Arduinos, that is 5V
+- Connect GND to common power/data ground (black wire on STEMMA QT version)
+- Connect the SCL pin to the I2C clock SCL pin on your Arduino. (yellow wire on STEMMA QT version) On an UNO & '328 based Arduino, this is also known as A5, on a Mega it is also known as digital 21 and on a Leonardo/Micro, digital 3
+- Connect the SDA pin to the I2C data SDA pin on your Arduino. (blue wire on STEMMA QT version) On an UNO & '328 based Arduino, this is also known as A4, on a Mega it is also known as digital 20 and on a Leonardo/Micro, digital 2
+
+
+Since this is also an SPI-capable sensor, we can use hardware or 'software' SPI. To make wiring identical on all Arduinos, we'll begin with 'software' SPI. The following pins should be used:
+
+- Connect Vin to the power supply, 3V or 5V is fine. Use the same voltage that the microcontroller logic is based off of. For most Arduinos, that is 5V
+- Connect GND to common power/data ground
+- Connect the SCL (SCK) pin to Digital #13 but any pin can be used later
+- Connect the SDO pin to Digital #12 but any pin can be used later
+- Connect the SDA (SDI) pin to Digital #11 but any pin can be used later
+- Connect the CS pin Digital #10 but any pin can be used later
+
+
+Here's an example of wiring a Feather M0 or M4 to the sensor with I2C:
+
+- Board 3V to sensor Vin (red wire on STEMMA QT version)
+- Board GND to sensor GND (black wire on STEMMA QT version)
+- Board SCL to sensor SCL (yellow wire on STEMMA QT version)
+- Board SDA to sensor SDA (blue wire on STEMMA QT version)
+- Board D6 to sensor INT (or use any other free digital I/O pin)
+
+And an example of a Feather M0 or M4 wired with hardware SPI:
+
+- Board 3V to sensor Vin
+- Board GND to sensor GND
+- Board SCK to sensor SCL
+- Board MOSI to sensor SDA
+- Board MISO to sensor SDO
+- Board D5 to sensor CS (or use any other free digital I/O pin)
+- Board D6 to sensor INT (or use any other free digital I/O pin)
+
+
